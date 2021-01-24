@@ -1,0 +1,46 @@
+<div *ngIf="showText">
+  <h1>{{textToShow}}</h1>
+</div>
+
+<table [ngClass]="tableClass" [ngStyle]="tableStyle" aria-labelledby="tableLabel" *ngIf="orders">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone</th>
+      <th>Restaurant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.firstName }}</td>
+      <td>{{ order.lastName }}</td>
+      <td>{{ order.phone }}</td>
+      <td>{{ order.restaurant}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-lg-4">
+    <button class="btn btn-primary" (click)="fetchOrders()">Fetch Orders</button>
+  </div>
+
+  <div class="col-lg-4">
+    <button class="btn btn-primary" (click)="changeTableClass()">Change Table Class</button>
+  </div>
+
+  <div class="col-lg-4">
+    <button class="btn btn-primary" (click)="changeTableStyle()">Change Table Style</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4">
+    <button class="btn btn-primary" (click)="showHideText()">Show Hide Text</button>
+  </div>
+
+  <div class="col-lg-4">
+    <button class="btn btn-primary" (click)="changeTextToShow()">Toggle Text</button>
+  </div>
+</div>

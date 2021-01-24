@@ -1,0 +1,27 @@
+<!-- TODO style this -->
+<div class="row">
+  <div class="col-lg-6">
+    <label>First Name:</label>
+    <input name="firstName" type="text" />
+  </div>
+
+  <div class="col-lg-6">
+    <label>Last Name:</label>
+    <input name="lastName" type="text" />
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <label>Phone:</label>
+    <input name="phone" type="text" />
+  </div>
+</div>
+
+<!-- TODO fill from server side -->
+<div>
+  <select>
+    <option *ngFor="let i of restaurants">{{i}}</option>
+  </select>
+</div>
